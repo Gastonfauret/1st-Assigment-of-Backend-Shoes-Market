@@ -1,6 +1,4 @@
-import { Controller, Get, Res } from '@nestjs/common';
-import { Response } from 'express'
-import { join } from 'path'
+import { Controller, Get, Param } from '@nestjs/common';
 import { ShoesService } from './shoes.service';
 
 @Controller('shoes')
@@ -10,5 +8,10 @@ export class ShoesController {
     @Get()
     getShoes() {
         return this.shoesService.getShoes();
+    }
+
+    @Get(':id')
+    getShoe(@Param('id') id:number) {
+        return this.shoesService.getShoe(id);
     }
 }

@@ -10,7 +10,17 @@ export class ShoesService {
       const parsed = await res.json();
       return parsed;
     } catch (error) {
-        throw new Error('Request error ' + error);
+      throw new Error('Request error ' + error);
+    }
+  }
+
+  async getShoe(id: number): Promise<ShoesInterface> {
+    try {
+      const res = await fetch(`${shoesURL}/shoes/${id}`);
+      const parsed = await res.json();
+      return parsed;
+    } catch (error) {
+      throw new Error('Request error ' + error);
     }
   }
 }
