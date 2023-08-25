@@ -1,85 +1,82 @@
-{
-    "shoes": [
-      {
-        "id": 1,
-        "marca": "Nike",
-        "modelo": "Air Max 90",
-        "precio": 150.0,
-        "talle": "US 10",
-        "imagen": "https://cdn.shopify.com/s/files/1/2358/2817/products/air-max-90-og-volt-293380.png?v=1638813413"
-      },
-      {
-        "id": 2,
-        "marca": "Adidas",
-        "modelo": "Superstar",
-        "precio": 100.0,
-        "talle": "US 9",
-        "imagen": "https://essential.vtexassets.com/arquivos/ids/983068-800-auto?v=638270483058670000&width=800&height=auto&aspect=true"
-      },
-      {
-        "id": 3,
-        "marca": "Vans",
-        "modelo": "Old Skool",
-        "precio": 75.0,
-        "talle": "US 7",
-        "imagen": "https://grimoldimediamanager.grimoldi.com/MediaFiles/Grimoldi/2023/2/7/8077346.jpg"
-      },
-      {
-        "id": 4,
-        "marca": "New Balance",
-        "modelo": "550",
-        "precio": 180.0,
-        "talle": "US 10.5",
-        "imagen": "https://www.newbalance.com.ar/media/catalog/product/cache/4/thumbnail/9df78eab33525d08d6e5fb8d27136e95/z/a/zapatillas-hombre-new-balance-550-bb550ha1-5-min_1.jpg"
-      },
-      {
-        "id": 5,
-        "marca": "Converse",
-        "modelo": "Chuck Taylor All Star",
-        "precio": 65.0,
-        "talle": "US 9.5",
-        "imagen": "https://www.moov.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dw4b9eb0b9/products/CO172902C/CO172902C-1.JPG"
-      },
-      {
-        "id": 6,
-        "marca": "DC Shoes",
-        "modelo": "Pure",
-        "precio": 70.0,
-        "talle": "US 8",
-        "imagen": "https://www.blockstore.cl/cdn/shop/products/p-ADYS300151WE9-2.jpg?v=1650306932"
-      },
-      {
-        "id": 7,
-        "marca": "Jordan",
-        "modelo": "Air Jordan 1",
-        "precio": 170.0,
-        "talle": "US 11",
-        "imagen": "https://images.prismic.io/sneakql/d95b0b3c-3c2f-4f12-8c29-e32c30b1d9f5_259.png?auto=format&ar=1%3A0.6666666666666666&fit=crop&ixlib=react-9.7.0&w=580"
-      },
-      {
-        "id": 8,
-        "marca": "Nike",
-        "modelo": "React Element 55",
-        "precio": 130.0,
-        "talle": "US 10.5",
-        "imagen": "https://falabella.scene7.com/is/image/Falabella/7457132_1?wid=800&hei=800&qlt=70"
-      },
-      {
-        "id": 9,
-        "marca": "Vans",
-        "modelo": "Sk8-Hi",
-        "precio": 85.0,
-        "talle": "US 9",
-        "imagen": "https://grimoldimediamanager.grimoldi.com/MediaFiles/Grimoldi/2023/2/13/8093533.jpg"
-      },
-      {
-        "id": 10,
-        "marca": "Nike",
-        "modelo": "Dunk",
-        "precio": 90.0,
-        "talle": "US 8.5",
-        "imagen": "https://bluexpress.com/cdn/shop/products/nike-dunk-low-panda1-min.jpg?v=1668538820"
-      }
-    ]
+[
+  {
+    "id": 1,
+    "marca": "Nike",
+    "modelo": "Air Max 90",
+    "precio": 150.0,
+    "talle": "US 10",
+    "imagen": "https://cdn.shopify.com/s/files/1/2358/2817/products/air-max-90-og-volt-293380.png?v=1638813413"
+  },
+  {
+    "id": 2,
+    "marca": "Adidas",
+    "modelo": "Superstar",
+    "precio": 100.0,
+    "talle": "US 9",
+    "imagen": "https://essential.vtexassets.com/arquivos/ids/983068-800-auto?v=638270483058670000&width=800&height=auto&aspect=true"
+  },
+  {
+    "id": 3,
+    "marca": "Vans",
+    "modelo": "Old Skool",
+    "precio": 75.0,
+    "talle": "US 7",
+    "imagen": "https://grimoldimediamanager.grimoldi.com/MediaFiles/Grimoldi/2023/2/7/8077346.jpg"
+  },
+  {
+    "id": 4,
+    "marca": "New Balance",
+    "modelo": "550",
+    "precio": 180.0,
+    "talle": "US 10.5",
+    "imagen": "https://www.newbalance.com.ar/media/catalog/product/cache/4/thumbnail/9df78eab33525d08d6e5fb8d27136e95/z/a/zapatillas-hombre-new-balance-550-bb550ha1-5-min_1.jpg"
+  },
+  {
+    "id": 5,
+    "marca": "Converse",
+    "modelo": "Chuck Taylor All Star",
+    "precio": 65.0,
+    "talle": "US 9.5",
+    "imagen": "https://www.moov.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dw4b9eb0b9/products/CO172902C/CO172902C-1.JPG"
+  },
+  {
+    "id": 6,
+    "marca": "DC Shoes",
+    "modelo": "Pure",
+    "precio": 70.0,
+    "talle": "US 8",
+    "imagen": "https://www.blockstore.cl/cdn/shop/products/p-ADYS300151WE9-2.jpg?v=1650306932"
+  },
+  {
+    "id": 7,
+    "marca": "Jordan",
+    "modelo": "Air Jordan 1",
+    "precio": 170.0,
+    "talle": "US 11",
+    "imagen": "https://images.prismic.io/sneakql/d95b0b3c-3c2f-4f12-8c29-e32c30b1d9f5_259.png?auto=format&ar=1%3A0.6666666666666666&fit=crop&ixlib=react-9.7.0&w=580"
+  },
+  {
+    "id": 8,
+    "marca": "Nike",
+    "modelo": "React Element 55",
+    "precio": 130.0,
+    "talle": "US 10.5",
+    "imagen": "https://falabella.scene7.com/is/image/Falabella/7457132_1?wid=800&hei=800&qlt=70"
+  },
+  {
+    "id": 9,
+    "marca": "Vans",
+    "modelo": "Sk8-Hi",
+    "precio": 85.0,
+    "talle": "US 9",
+    "imagen": "https://grimoldimediamanager.grimoldi.com/MediaFiles/Grimoldi/2023/2/13/8093533.jpg"
+  },
+  {
+    "id": 10,
+    "marca": "Nike",
+    "modelo": "Dunk",
+    "precio": 90.0,
+    "talle": "US 8.5",
+    "imagen": "https://bluexpress.com/cdn/shop/products/nike-dunk-low-panda1-min.jpg?v=1668538820"
   }
-  
+]

@@ -1,12 +1,12 @@
 import { Injectable } from '@nestjs/common';
-import { ShoesInterface } from './shoes.interface';
-export const BASEURL = 'http://localhost:3150';
+import { BASEURL } from 'src/shoes/shoes.service';
+import { UsersInterface } from './users.interface';
 
 @Injectable()
-export class ShoesService {
-  async getShoes(): Promise<ShoesInterface[]> {
+export class UsersService {
+  async getUsers(): Promise<UsersInterface[]> {
     try {
-      const res = await fetch(`${BASEURL}/shoes`);
+      const res = await fetch(`${BASEURL}/users`);
       const parsed = await res.json();
       return parsed;
     } catch (error) {
@@ -14,9 +14,9 @@ export class ShoesService {
     }
   }
 
-  async getShoe(id: number): Promise<ShoesInterface> {
+  async getUser(id: number): Promise<UsersInterface> {
     try {
-      const res = await fetch(`${BASEURL}/shoes/${id}`);
+      const res = await fetch(`${BASEURL}/users/${id}`);
       const parsed = await res.json();
       return parsed;
     } catch (error) {
