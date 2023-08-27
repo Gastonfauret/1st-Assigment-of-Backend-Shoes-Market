@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "marca": "Blackhair",
+        "modelo": "jacket",
+        "precio": "$ 35.00",
+        "talle": "M",
+        "imagen": "https://m.media-amazon.com/images/I/713Ypygi9JL._AC_UY1000_.jpg"
+    },
+    {
+        "id": 2,
+        "marca": "Fearless",
+        "modelo": "Remera oversize",
+        "precio": "$ 80.00",
+        "talle": "L",
+        "imagen": "https://i.pinimg.com/564x/19/f3/e1/19f3e1b52faf19fed46e1cf781f1555f.jpg"
+    },
+    {
+        "id": 3,
+        "marca": "Dennis Rodman",
+        "modelo": "Remera oversize",
+        "precio": "$ 45.00",
+        "talle": "S",
+        "imagen": "https://i.pinimg.com/564x/18/1e/99/181e9926b043590e0b3d72947bc53073.jpg"
+    },
+    {
+        "id": 4,
+        "marca": "Shein",
+        "modelo": "Buzo",
+        "precio": "$ 50.00",
+        "talle": "M",
+        "imagen": "https://i.pinimg.com/564x/bb/2a/c0/bb2ac0974e10b7b9ade702373e672bd8.jpg"
+    },
+    {
+        "id": 5,
+        "marca": "Scarface",
+        "modelo": "Remera",
+        "precio": "$ 25.00",
+        "talle": "L",
+        "imagen": "https://i.pinimg.com/564x/b0/b3/36/b0b3362fca998acb3eccc9ecc1c08084.jpg"
+    },
+    {
+        "id": 6,
+        "marca": "Carhart",
+        "modelo": "Jean ",
+        "precio": "$ 60.00",
+        "talle": "S",
+        "imagen": "https://i.pinimg.com/564x/aa/b2/54/aab254abf873ab5cd3c6e8c835d5257a.jpg"
+    },
+    {
+        "id": 7,
+        "marca": "Supreme",
+        "modelo": "Rompeviento",
+        "precio": "$ 40.00",
+        "talle": "M",
+        "imagen": "https://i.pinimg.com/564x/4e/a9/39/4ea93986fb63176606aedf770bf49eb5.jpg"
+    },
+    {
+        "id": 8,
+        "marca": "Levi's",
+        "modelo": "Jean Clásico",
+        "precio": "$ 70.00",
+        "talle": "L",
+        "imagen": "https://i.pinimg.com/564x/05/6c/0c/056c0cf3a7f4a03da9b92cb5a90d9d8e.jpg"
+    },
+    {
+        "id": 9,
+        "marca": "Stussy",
+        "modelo": "Remera oversize",
+        "precio": "$ 55.00",
+        "talle": "S",
+        "imagen": "https://i.pinimg.com/564x/09/87/49/098749fcadf4384a54d701c882be12df.jpg"
+    },
+    {
+        "id": 10,
+        "marca": "Northface",
+        "modelo": "Campera puffer",
+        "precio": "$ 30.00",
+        "talle": "M",
+        "imagen": "https://i.pinimg.com/564x/63/78/28/637828b119355d0a54d6be6c711009f4.jpg"
+    }
+]
