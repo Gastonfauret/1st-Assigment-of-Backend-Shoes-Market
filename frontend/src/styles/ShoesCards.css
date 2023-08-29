@@ -1,0 +1,18 @@
+.cards-container {
+    width: 100%;
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+
+
+    & .shoes-cards-container {
+        width: 15rem;
+        height: 25rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin: 1rem;
+        background-color: blueviolet;
+    }
+}
