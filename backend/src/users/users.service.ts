@@ -23,4 +23,17 @@ export class UsersService {
       throw new Error('Request error ' + error);
     }
   }
+
+  async create(age: number, name: string) {
+  const newUser = {
+      name: name,
+      age: age
+    }
+    fetch(`${BASEURL}/users`, {
+      method: 'POST',
+      headers: {'Content-Type' : 'application/json'},
+      body: JSON.stringify(newUser)
+    })
+    return newUser;
+  }
 }

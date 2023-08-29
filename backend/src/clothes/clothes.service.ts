@@ -7,8 +7,7 @@ export class ClothesService {
     async getClothes(): Promise<ClothesInterface[]> {
         try {
             const res = await fetch(`${BASEURL}/clothes`);
-            const parsed = await res.json();
-            return parsed;
+            return await res.json();
         } catch (error) {
             throw new Error('Request error ' + error);
         }
@@ -17,10 +16,33 @@ export class ClothesService {
     async getClothe(id: number): Promise<ClothesInterface> {
         try {
             const res = await fetch(`${BASEURL}/clothes/${id}`);
-            const parsed = await res.json();
-            return parsed;
+            return await res.json();
         } catch (error) {
             throw new Error('Request error ' + error);
         }
     }
+
+    //devolver tambien id.
+    //mostrar mensaje de respuesta.
+    async create(
+        marca: string,
+        modelo: string,
+        precio: string,
+        talle: string,
+        imagen: string,
+      ) {
+        const newClothe = {
+          marca: marca,
+          modelo: modelo,
+          precio: precio,
+          talle: talle,
+          imagen: imagen,
+        };
+        const a = await fetch(`${BASEURL}/clothes`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(newClothe),
+        });
+        return a;
+      }
 }

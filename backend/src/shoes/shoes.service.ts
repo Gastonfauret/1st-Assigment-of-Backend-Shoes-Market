@@ -23,4 +23,26 @@ export class ShoesService {
       throw new Error('Request error ' + error);
     }
   }
+
+  async create(
+    marca: string,
+    modelo: string,
+    precio: number,
+    talle: string,
+    imagen: string,
+  ) {
+    const newShoe = {
+      marca: marca,
+      modelo: modelo,
+      precio: precio,
+      talle: talle,
+      imagen: imagen,
+    };
+    fetch(`${BASEURL}/shoes`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(newShoe),
+    });
+    return newShoe;
+  }
 }
