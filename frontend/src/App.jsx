@@ -13,8 +13,8 @@ function App() {
 
   useEffect(() => {
     getShoes()
-    .then(res => res.json())
-    .then(data => setShoes(data))
+      .then(res => res.json())
+      .then(data => setShoes(data))
   }, [])
 
   //console.log(shoes[0].marca)
@@ -24,7 +24,11 @@ function App() {
       <Header />
       <Branches />
 
-      {Array.from(shoes).map(shoe => <ShoesCards shoe={shoe} key={shoe.id} />)}
+      <div className="cards-container">
+        {shoes.map(shoe => <ShoesCards shoe={shoe} key={shoe.id} />)}
+      </div>
+
+
     </>
   )
 }

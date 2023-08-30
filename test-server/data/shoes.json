@@ -3,80 +3,80 @@
     "id": 1,
     "marca": "Nike",
     "modelo": "Air Max 90",
-    "precio": 150.0,
+    "precio": "$USD 150",
     "talle": "US 10",
-    "imagen": "./Shoes Images/1.png"
+    "imagen": "https://i.postimg.cc/xCcNC6cB/1.png"
   },
   {
     "id": 2,
     "marca": "Adidas",
     "modelo": "Superstar",
-    "precio": 100.0,
+    "precio": "$USD 100",
     "talle": "US 9",
-    "imagen": "./Shoes Images/2.png"
+    "imagen": "https://i.postimg.cc/k4z6tWSG/2.png"
   },
   {
     "id": 3,
     "marca": "Vans",
     "modelo": "Old Skool",
-    "precio": 75.0,
+    "precio": "$USD 75",
     "talle": "US 7",
-    "imagen": "./Shoes Images/3.png"
+    "imagen": "https://i.postimg.cc/0ysSfGBJ/3.png"
   },
   {
     "id": 4,
     "marca": "New Balance",
     "modelo": "550",
-    "precio": 180.0,
+    "precio": "$USD 180",
     "talle": "US 10.5",
-    "imagen": "./Shoes Images/4.png"
+    "imagen": "https://i.postimg.cc/Gp3y0LrL/4.png"
   },
   {
     "id": 5,
     "marca": "Converse",
     "modelo": "Chuck Taylor All Star",
-    "precio": 65.0,
+    "precio": "$USD 65",
     "talle": "US 9.5",
-    "imagen": "./Shoes Images/5.png"
+    "imagen": "https://i.postimg.cc/8CyrN2Ph/5.png"
   },
   {
     "id": 6,
     "marca": "DC Shoes",
     "modelo": "Pure",
-    "precio": 70.0,
+    "precio": "$USD 70",
     "talle": "US 8",
-    "imagen": "./Shoes Images/6.png"
+    "imagen": "https://i.postimg.cc/rFS0K0wy/6.png"
   },
   {
     "id": 7,
     "marca": "Jordan",
     "modelo": "Air Jordan 1",
-    "precio": 170.0,
+    "precio": "$USD 170",
     "talle": "US 11",
-    "imagen": "./Shoes Images/7.png"
+    "imagen": "https://i.postimg.cc/vZtVS1J2/7.png"
   },
   {
     "id": 8,
     "marca": "Nike",
     "modelo": "React Element 55",
-    "precio": 130.0,
+    "precio": "$USD 130",
     "talle": "US 10.5",
-    "imagen": "./Shoes Images/8.png"
+    "imagen": "https://i.postimg.cc/qqKtcgcL/8.png"
   },
   {
     "id": 9,
     "marca": "Vans",
     "modelo": "Sk8-Hi",
-    "precio": 85.0,
+    "precio": "$USD 85",
     "talle": "US 9",
-    "imagen": "./Shoes Images/9.png"
+    "imagen": "https://i.postimg.cc/CMnfp6yq/9.png"
   },
   {
     "id": 10,
     "marca": "Nike",
     "modelo": "Dunk",
-    "precio": 90.0,
+    "precio": "$USD 90",
     "talle": "US 8.5",
-    "imagen": "./Shoes Images/10.png"
+    "imagen": "https://i.postimg.cc/bNXSyH8F/10.png"
   }
 ]
