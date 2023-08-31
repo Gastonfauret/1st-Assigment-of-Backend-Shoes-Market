@@ -5,7 +5,7 @@
         "modelo": "jacket",
         "precio": "$ 35.00",
         "talle": "M",
-        "imagen": "https://m.media-amazon.com/images/I/713Ypygi9JL._AC_UY1000_.jpg"
+        "imagen": "https://i.postimg.cc/MKM50MSk/Clothes-1.png"
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "modelo": "Remera oversize",
         "precio": "$ 80.00",
         "talle": "L",
-        "imagen": "https://i.pinimg.com/564x/19/f3/e1/19f3e1b52faf19fed46e1cf781f1555f.jpg"
+        "imagen": "https://i.postimg.cc/HWP370F4/Clothes-2.png"
     },
     {
         "id": 3,
@@ -21,7 +21,7 @@
         "modelo": "Remera oversize",
         "precio": "$ 45.00",
         "talle": "S",
-        "imagen": "https://i.pinimg.com/564x/18/1e/99/181e9926b043590e0b3d72947bc53073.jpg"
+        "imagen": "https://i.postimg.cc/4yn5SnH9/Clothes-3.png"
     },
     {
         "id": 4,
@@ -29,7 +29,7 @@
         "modelo": "Buzo",
         "precio": "$ 50.00",
         "talle": "M",
-        "imagen": "https://i.pinimg.com/564x/bb/2a/c0/bb2ac0974e10b7b9ade702373e672bd8.jpg"
+        "imagen": "https://i.postimg.cc/7LMmCFyf/Clothes-4.png"
     },
     {
         "id": 5,
@@ -37,7 +37,7 @@
         "modelo": "Remera",
         "precio": "$ 25.00",
         "talle": "L",
-        "imagen": "https://i.pinimg.com/564x/b0/b3/36/b0b3362fca998acb3eccc9ecc1c08084.jpg"
+        "imagen": "https://i.postimg.cc/d1566G3F/Clothes-5.png"
     },
     {
         "id": 6,
@@ -45,7 +45,7 @@
         "modelo": "Jean ",
         "precio": "$ 60.00",
         "talle": "S",
-        "imagen": "https://i.pinimg.com/564x/aa/b2/54/aab254abf873ab5cd3c6e8c835d5257a.jpg"
+        "imagen": "https://i.postimg.cc/1zZv392k/Clothes-6.png"
     },
     {
         "id": 7,
@@ -53,7 +53,7 @@
         "modelo": "Rompeviento",
         "precio": "$ 40.00",
         "talle": "M",
-        "imagen": "https://i.pinimg.com/564x/4e/a9/39/4ea93986fb63176606aedf770bf49eb5.jpg"
+        "imagen": "https://i.postimg.cc/VvTRQ1XH/Clothes-7.png"
     },
     {
         "id": 8,
@@ -61,7 +61,7 @@
         "modelo": "Jean Clásico",
         "precio": "$ 70.00",
         "talle": "L",
-        "imagen": "https://i.pinimg.com/564x/05/6c/0c/056c0cf3a7f4a03da9b92cb5a90d9d8e.jpg"
+        "imagen": "https://i.postimg.cc/MpBswcP0/Clothes-8.png"
     },
     {
         "id": 9,
@@ -69,7 +69,7 @@
         "modelo": "Remera oversize",
         "precio": "$ 55.00",
         "talle": "S",
-        "imagen": "https://i.pinimg.com/564x/09/87/49/098749fcadf4384a54d701c882be12df.jpg"
+        "imagen": "https://i.postimg.cc/ZK2fXPcK/Clothes-9.png"
     },
     {
         "id": 10,
@@ -77,6 +77,6 @@
         "modelo": "Campera puffer",
         "precio": "$ 30.00",
         "talle": "M",
-        "imagen": "https://i.pinimg.com/564x/63/78/28/637828b119355d0a54d6be6c711009f4.jpg"
+        "imagen": "https://i.postimg.cc/85pwLZ1w/Clothes-10.png"
     }
 ]
