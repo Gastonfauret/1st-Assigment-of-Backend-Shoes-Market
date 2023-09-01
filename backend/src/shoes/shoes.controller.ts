@@ -39,7 +39,7 @@ export class ShoesController {
     try {
       const serviceResponse = await this.shoesService.getShoe(id);
       if(Object.keys(serviceResponse).length && id > 0) {
-        return res.status(HttpStatus.OK).send(serviceResponse);
+        return res.status(HttpStatus.OK).send({message: `Request by id: ${id}`, response: serviceResponse});
       } else {
         return res.status(HttpStatus.NOT_FOUND).send({message: 'Non-existent or not allowed id', errorCode: HttpStatus.NOT_FOUND})
       }
