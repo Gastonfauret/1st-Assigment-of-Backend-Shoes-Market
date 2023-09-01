@@ -1,7 +1,19 @@
+import { Transform } from 'class-transformer';
+import { IsString, IsInt } from 'class-validator';
+
 export class ClothesDTO {
-    marca: string
-    modelo: string
-    precio: string
-    talle: string
-    imagen: string
+    @IsString()
+    marca: string;
+
+    @IsString()
+    modelo: string;
+
+    @IsString()
+    precio: string;
+
+    @IsString()
+    talle: string;
+
+    @IsString()
+    imagen: string;
 }
