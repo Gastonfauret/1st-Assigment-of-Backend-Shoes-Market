@@ -5,6 +5,8 @@ import { getShoes } from './api/getShoes';
 import Header from './components/Header'
 import Branches from './components/Branches'
 import ShoesCards from './components/ShoesCards';
+import Footer from './components/Footer';
+import BannerJeans from './components/BannerJeans';
 
 import './styles/App.css'
 
@@ -21,13 +23,15 @@ function App() {
 
   return (
     <>
-      <Header />
+      {/* <Header /> */}
+      <BannerJeans/>
       <Branches />
 
       <div className="cards-container">
         {shoes.map(shoe => <ShoesCards shoe={shoe} key={shoe.id} />)}
       </div>
 
+    <Footer/>
 
     </>
   )

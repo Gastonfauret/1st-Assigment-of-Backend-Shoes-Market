@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap');
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 10rem;
+    background-color: black;   
+    justify-content: space-between; 
+    
+    & .description-container {
+        display: flex;
+        gap: 5rem;
+    }
+
+    & h3 {
+        color: white;
+        font-size:small;
+        font-family: 'Roboto', sans-serif;
+        margin-top: 2rem;
+        margin-left: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    & p {
+        color: gray;
+        font-size:x-small;
+        font-family: 'Roboto', sans-serif;
+        margin-top: 0px;
+        margin-left: 2rem;
+        margin-bottom: 0.5rem;       
+    }
+
+    & .copy-design-container {
+        display: flex;
+        align-items: end;        
+        margin-bottom: 0px;        
+        justify-content: space-between;
+        margin-right: 2rem;
+    }
+
+    & .social {
+        display: flex;
+        gap: 0.5rem;        
+        font-size: x-large; 
+        margin-top: 2rem;  
+        margin-left: 54rem; 
+        
+        & .instagram, .facebook, .twitter, .tiktok {
+            color: white;
+        }
+
+        & .instagram:hover {
+            color: rosybrown;
+        }
+
+        & .facebook:hover {
+            color: blue;
+        }
+
+        & .twitter:hover {
+            color: lightskyblue;
+        }
+
+        & .tiktok:hover {
+            color: yellowgreen;
+        }
+    }
+}
