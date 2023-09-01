@@ -2,7 +2,7 @@ export interface ShoesInterface {
     id: number,
     marca: string,
     modelo: string,
-    precio: number,
+    precio: string,
     talle: string,
     imagen: string
 }

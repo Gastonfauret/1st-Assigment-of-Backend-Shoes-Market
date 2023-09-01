@@ -10,7 +10,7 @@ export class ClothesService {
       const res = await fetch(`${BASEURL}/clothes`);
       return await res.json();
     } catch (error) {
-      throw new Error('Get request error ' + error);
+      throw new Error('Get request error');
     }
   }
 
@@ -19,7 +19,7 @@ export class ClothesService {
       const res = await fetch(`${BASEURL}/clothes/${id}`);
       return await res.json();
     } catch (error) {
-      throw new Error('Get by id request error ' + error);
+      throw new Error('Get by id request error ');
     }
   }
 
@@ -30,9 +30,7 @@ export class ClothesService {
   }
 
   //mostrar mensaje de respuesta.
-  async create(
-    clothe: ClothesDTO
-  ): Promise<ClothesInterface> {
+  async create(clothe: ClothesDTO): Promise<ClothesInterface> {
     const { marca, modelo, precio, talle, imagen } = clothe;
     const newClothe = {
       id: (await this.lastId()) + 1,
@@ -54,7 +52,7 @@ export class ClothesService {
     return newClothe;
   }
 
-  async delete(id: number) {
+  async delete(id: number): Promise<ClothesInterface> {
     const deleted = await this.getClothe(id);
     try {
       await fetch(`${BASEURL}/clothes/${id}`, {
@@ -66,7 +64,7 @@ export class ClothesService {
     return deleted;
   }
 
-  async update(id: number, clothe: ClothesDTO) {
+  async update(id: number, clothe: ClothesDTO): Promise<ClothesInterface> {
     const { marca, modelo, precio, talle, imagen } = clothe;
     const updated = {
       id: id,
@@ -77,14 +75,17 @@ export class ClothesService {
       imagen: imagen,
     };
     try {
-      await fetch(`${BASEURL}/clothes/${id}`, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(updated),
-      });
+      const found = (await this.getClothes()).find((item) => item.id === Number(id));
+      if(found) {
+        await fetch(`${BASEURL}/clothes/${id}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(updated),
+        });
+        return updated;
+      }
     } catch (error) {
       throw new Error('Put request error' + error);
     }
-    return updated;
   }
 }
