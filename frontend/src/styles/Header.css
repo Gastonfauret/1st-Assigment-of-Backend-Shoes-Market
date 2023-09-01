@@ -8,7 +8,10 @@
     justify-content: center;
     place-items: center;
     flex-direction: column;
-    
+
+    & .jeans-logo {
+        height: 2rem;
+    }    
 
     & h1 {
         font-family: 'Roboto', sans-serif;
