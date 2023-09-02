@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap');
+
+.clothes-cards-container {
+    width: 20rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
+    margin: 2rem;
+    border-radius: 0.5rem;
+    border: solid 1px #F4F6F7;
+
+    box-shadow:
+        6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+        22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+        100px 100px 80px rgba(0, 0, 0, 0.07);
+
+    .clothe-photo {
+        width: 15rem;
+    }
+
+    .clothe-text-container {
+        display: flex;        
+        align-items: center;
+        gap: 1.6rem;
+    }
+
+    .brand {
+        font-family: 'Roboto', sans-serif;
+        font-size: xx-large;
+    }
+
+    .model,
+    .size {
+        font-family: 'Roboto', sans-serif;
+        font-size: large;
+    }
+
+    .price {
+        font-family: 'Roboto', sans-serif;
+        font-size: x-large;
+        color: green;
+    }
+}

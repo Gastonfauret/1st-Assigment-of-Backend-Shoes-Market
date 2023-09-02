@@ -5,17 +5,22 @@
     flex-direction: column;
     width: 100%;
     height: 10rem;
-    background-color: black;   
-    justify-content: space-between; 
-    
+    background-color: black;
+    justify-content: space-between;
+    align-items: stretch;
+
+    & .elements-container {
+        display: flex;
+        gap: 38rem;
+    }
+
     & .description-container {
         display: flex;
-        gap: 5rem;
     }
 
     & h3 {
         color: white;
-        font-size:small;
+        font-size: small;
         font-family: 'Roboto', sans-serif;
         margin-top: 2rem;
         margin-left: 2rem;
@@ -24,30 +29,43 @@
 
     & p {
         color: gray;
-        font-size:x-small;
+        font-size: x-small;
         font-family: 'Roboto', sans-serif;
         margin-top: 0px;
         margin-left: 2rem;
-        margin-bottom: 0.5rem;       
+        margin-bottom: 0.5rem;
     }
 
     & .copy-design-container {
         display: flex;
-        align-items: end;        
-        margin-bottom: 0px;        
+        align-items: end;
+        margin-bottom: 0px;
         justify-content: space-between;
         margin-right: 2rem;
+
+        & .gula-designers {
+            cursor: pointer;
+        }
+
+        & .gula-designers:hover {
+            color: red;
+        }
     }
 
     & .social {
         display: flex;
-        gap: 0.5rem;        
-        font-size: x-large; 
-        margin-top: 2rem;  
-        margin-left: 54rem; 
-        
-        & .instagram, .facebook, .twitter, .tiktok {
+        gap: 1rem;
+        font-size: x-large;
+        margin-top: 2rem;
+
+
+
+        & .instagram,
+        .facebook,
+        .twitter,
+        .tiktok {
             color: white;
+            cursor: pointer;
         }
 
         & .instagram:hover {
