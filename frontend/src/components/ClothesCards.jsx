@@ -5,7 +5,7 @@ import React from 'react'
 function ClothesCards({ clothe }) {
 
     return (
-        <div className="clothe-cards-container" id={clothe.id}>
+        <div className="clothes-cards-container" id={clothe.id}>
             <img className='clothe-photo' src={clothe.imagen} alt="clothe Image" />
 
             <p className='brand'>{clothe.marca}</p>

@@ -1,1 +1,1 @@
-export const getUsers = () => fetch('http://localhost:3150/users')
+export const getUsers = () => fetch('http://localhost:3080/users')

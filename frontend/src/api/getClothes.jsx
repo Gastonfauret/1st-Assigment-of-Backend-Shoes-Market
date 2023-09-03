@@ -1,1 +1,1 @@
-export const getClothes = () => fetch('http://localhost:3150/clothes')
+export const getClothes = () => fetch('http://localhost:3080/clothes')

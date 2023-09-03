@@ -6,7 +6,6 @@ import MapShoeCards from './components/MapShoeCards';
 import MapClothesCards from './components/MapClothesCards';
 import MapUsersCards from './components/MapUsersCards';
 
-
 import './styles/App.css'
 
 function App() {
@@ -18,9 +17,9 @@ function App() {
     <>
       <Carousel />      
       <Branches />
-      <MapShoeCards />
-      {/* <MapClothesCards />
-      <MapUsersCards /> */}
+      {/* <MapShoeCards /> */}
+      <MapClothesCards />
+       {/* <MapUsersCards /> */}
       <Footer/>
 
     </>
