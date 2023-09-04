@@ -17,29 +17,27 @@
         100px 100px 80px rgba(0, 0, 0, 0.07);
 
     .user-photo {
-        width: 15rem;
+        width: 12rem;
+        border-radius: 50%;
     }
 
-    .user-text-container {
-        display: flex;        
-        align-items: center;
-        gap: 1.6rem;
-    }
-
-    .brand {
+    .name-lastname {
         font-family: 'Roboto', sans-serif;
-        font-size: xx-large;
+        margin: 0px;
+        margin-top: 1.5em;
+        font-size: x-large;
     }
 
-    .model,
-    .size {
-        font-family: 'Roboto', sans-serif;
-        font-size: large;
-    }
-
-    .price {
+    .age {
         font-family: 'Roboto', sans-serif;
         font-size: x-large;
-        color: green;
+        margin: 0px;
+        margin-top: 0.5em;
     }
+
+    
+}
+
+.users-cards-container:hover {
+    border: solid 1px black;
 }

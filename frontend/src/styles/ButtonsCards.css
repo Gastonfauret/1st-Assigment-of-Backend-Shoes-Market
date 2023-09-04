@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap');
+
+.buttons-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    & ul {
+        list-style: none;
+        display: flex;
+        gap: 3rem;
+        font-family: 'Roboto', sans-serif;
+        
+
+        & a {
+            text-decoration: none;
+            color: black;
+        }
+
+        & a:hover {
+            color: chartreuse;
+        }
+
+    }
+}

@@ -43,3 +43,7 @@
         color: green;
     }
 }
+
+.shoes-cards-container:hover {
+    border: solid 1px black;
+}

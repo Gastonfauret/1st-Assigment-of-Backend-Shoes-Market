@@ -8,9 +8,8 @@ function UsersCards({ user }) {
         <div className="users-cards-container" id={user.id}>
             <img className='user-photo' src={user.image} alt="User Image" />
 
-            <p className='name'>{user.name}</p>
-            <p className='last-name'>{user.lastname}</p>
-            <p className='age'>{user.age}</p>
+            <p className='name-lastname'>{user.name} {user.lastname}</p>
+            <p className='age'>Age: {user.age}</p>
            
         </div>
     )
