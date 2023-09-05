@@ -1,11 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap');
+
 .home-container {
     width: 100%;
-    height: 30rem;
-    background-color: aqua;
+    height: 30rem;    
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 2rem;
     margin-top: 2rem;
-    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+
+    & .banner-home {
+        display: flex;
+        width: 30%;
+        height: 100%;       
+        border-radius: 1rem;  
+        align-items: end;      
+        justify-content: center;
+        justify-content: space-around;
+        color: white;   
+        font-family: 'Roboto', sans-serif;     
+
+        & img {            
+            height: 2rem;
+            margin-bottom: 1.5rem;            
+        }
+    }
+
+    & .nike {
+        width: 30%;
+        height: 100%;
+        background-image: url(https://i.postimg.cc/CM2sm4T2/People-Running.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    & .adidas {
+        width: 30%;
+        height: 100%;
+        background-image: url(https://i.postimg.cc/4NhbMhXx/Yoga.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .vans {
+        width: 30%;
+        height: 100%;
+        background-image: url(https://i.postimg.cc/d3hmJhdn/vans.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; 
+    }
+
+    
+
+
+
 }

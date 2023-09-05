@@ -10,6 +10,7 @@ import MapUsersCards from './components/MapUsersCards';
 import ButtonsCards from './components/ButtonsCards';
 import BannerHome from './components/BannerHome';
 
+
 import './styles/App.css'
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
         <Route exact path='/shoes' element={<MapShoeCards />} />
         <Route exact path='/clothes' element={<MapClothesCards />} />
         <Route exact path='/users' element={<MapUsersCards />} />
-      </Routes>
+      </Routes>     
 
       <Footer />
 

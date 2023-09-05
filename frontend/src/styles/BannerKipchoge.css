@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap');
+
+.banner-kipchoge-container {
+    width: 97%;
+    height: 30rem; 
+    background-color: #EB984E;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    
+    & img {
+        width: 22rem;        
+    }
+
+    .text-container {
+        display: flex;        
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 10rem;
+        font-family: 'Roboto', sans-serif;
+        font-size: 50px;
+        color: #ECF0F1;  
+        gap: 15rem;
+        
+        & img {
+            width: 10rem;
+        }
+    }
+}
