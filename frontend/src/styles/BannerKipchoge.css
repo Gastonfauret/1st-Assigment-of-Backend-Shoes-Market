@@ -17,12 +17,12 @@
     .text-container {
         display: flex;        
         margin-top: auto;
-        margin-bottom: auto;
-        margin-right: 10rem;
+        margin-bottom: auto;        
         font-family: 'Roboto', sans-serif;
-        font-size: 50px;
+        font-size: 3rem;
         color: #ECF0F1;  
-        gap: 15rem;
+        gap: 3rem;
+        margin-right: 2rem;        
         
         & img {
             width: 10rem;

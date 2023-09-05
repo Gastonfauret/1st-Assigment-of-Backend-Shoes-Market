@@ -8,6 +8,8 @@
     background-color: black;
     justify-content: space-between;
     align-items: stretch;
+    padding-bottom: 1rem;
+    
 
     & .elements-container {
         display: flex;
@@ -41,7 +43,7 @@
         align-items: end;
         margin-bottom: 0px;
         justify-content: space-between;
-        margin-right: 2rem;
+        margin-right: 2em;
 
         & .gula-designers {
             cursor: pointer;
@@ -57,7 +59,7 @@
         gap: 1rem;
         font-size: x-large;
         margin-top: 2rem;
-        margin-right: 2rem;
+        margin-right: 1em;
 
         & .instagram,
         .facebook,
