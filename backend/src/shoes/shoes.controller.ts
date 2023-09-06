@@ -39,7 +39,7 @@ export class ShoesController {
     try {
       const serviceResponse = await this.shoesService.getShoe(id);
       if(Object.keys(serviceResponse).length && id > 0) {
-        return res.status(HttpStatus.OK).send({message: `Request by id: ${id}`, response: serviceResponse});
+        return res.status(HttpStatus.OK).send({message: `Request by id: ${id}`, data: serviceResponse});
       } else {
         return res.status(HttpStatus.NOT_FOUND).send({message: 'Non-existent or not allowed id', errorCode: HttpStatus.NOT_FOUND})
       }
@@ -53,7 +53,7 @@ export class ShoesController {
   async create(@Res() res: Response, @Body() shoe: ShoesDTO) {
     try {
       const serviceResponse = await this.shoesService.create(shoe);
-      return res.status(HttpStatus.CREATED).json(serviceResponse);
+      return res.status(HttpStatus.CREATED).json({message: 'Object has been created', data: serviceResponse});
     } catch (error) {
       throw new BadRequestException('Data not allowed' + error);
     }
@@ -69,7 +69,7 @@ export class ShoesController {
       if (Object.keys(serviceResponse).length) {
         return res
           .status(HttpStatus.OK)
-          .send({ message: 'File has been deleted', serviceResponse });
+          .send({ message: `File has been deleted: Id ${id}`, code: HttpStatus.OK });
       } else {
         return res
           .status(HttpStatus.NOT_FOUND)
@@ -89,7 +89,7 @@ export class ShoesController {
     try {
       const serviceResponse = await this.shoesService.update(id, shoe);
       if(Object.keys(serviceResponse).length && id > 0) {
-        return res.status(HttpStatus.ACCEPTED).send({message: 'File has been updated', serviceResponse})
+        return res.status(HttpStatus.ACCEPTED).send({message: 'File has been updated', data: serviceResponse})
       } else {
         return res.status(HttpStatus.NOT_FOUND).send({ message: 'File not exist', errorCode: HttpStatus.NOT_FOUND })
       }

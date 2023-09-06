@@ -40,7 +40,7 @@ export class UsersController {
     try {
       const serviceResponse = await this.usersService.getUser(id);
       if(Object.keys(serviceResponse).length && id > 0) {
-        return res.status(HttpStatus.OK).send({message: `Request by id: ${id}`, response: serviceResponse});
+        return res.status(HttpStatus.OK).send({message: `Request by id: ${id}`, data: serviceResponse});
       } else {
         return res.status(HttpStatus.NOT_FOUND).send({message: 'Non-existent or not allowed id', errorCode: HttpStatus.NOT_FOUND})
       }
@@ -54,7 +54,7 @@ export class UsersController {
   async create(@Res() res: Response, @Body() user: UsersDTO) {
     try {
       const serviceResponse = await this.usersService.create(user);
-      return res.status(HttpStatus.CREATED).json(serviceResponse);
+      return res.status(HttpStatus.CREATED).json({message: 'Object has been created', data: serviceResponse});
     } catch (error) {
       throw new BadRequestException('Data not allowed' + error);
     }
@@ -70,7 +70,7 @@ export class UsersController {
       if (Object.keys(serviceResponse).length) {
         return res
           .status(HttpStatus.OK)
-          .send({ message: 'File has been deleted', serviceResponse });
+          .send({ message: `File has been deleted: Id ${id}`, code: HttpStatus.OK });
       } else {
         return res
           .status(HttpStatus.NOT_FOUND)
@@ -90,7 +90,7 @@ export class UsersController {
     try {
       const serviceResponse = await this.usersService.update(id, user);
       if(Object.keys(serviceResponse).length && id > 0) {
-        return res.status(HttpStatus.ACCEPTED).send({message: 'File has been updated', serviceResponse})
+        return res.status(HttpStatus.ACCEPTED).send({message: 'File has been updated', data: serviceResponse})
       } else {
         return res.status(HttpStatus.NOT_FOUND).send({ message: 'File not exist', errorCode: HttpStatus.NOT_FOUND })
       }
