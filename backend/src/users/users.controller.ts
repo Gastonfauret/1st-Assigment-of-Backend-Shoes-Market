@@ -14,7 +14,8 @@ import {
   Res,
   HttpStatus,
   NotFoundException,
-  BadRequestException
+  BadRequestException,
+  ParseIntPipe
 } from '@nestjs/common';
 import { Response } from 'express';
 import { ValidationPipe } from '@nestjs/common/pipes';
@@ -36,7 +37,7 @@ export class UsersController {
   }
 
   @Get(':id')
-  async getById(@Res() res: Response, @Param('id') id: number) {
+  async getById(@Res() res: Response, @Param('id', ParseIntPipe) id: number) {
     try {
       const serviceResponse = await this.usersService.getUser(id);
       if(Object.keys(serviceResponse).length && id > 0) {
@@ -63,7 +64,7 @@ export class UsersController {
   @Delete(':id')
   async delete(
     @Res() res: Response,
-    @Param('id') id: number,
+    @Param('id', ParseIntPipe) id: number,
   ): Promise<Response<UsersInterface>> {
     try {
       const serviceResponse = await this.usersService.delete(id);
@@ -84,7 +85,7 @@ export class UsersController {
   @Put(':id')
   async update(
     @Res() res: Response,
-    @Param('id') id: number,
+    @Param('id', ParseIntPipe) id: number,
     @Body() user: UsersDTO,
   ) {
     try {

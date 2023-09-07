@@ -10,7 +10,8 @@ import {
   Res,
   HttpStatus,
   NotFoundException,
-  BadRequestException
+  BadRequestException,
+  ParseIntPipe
 } from '@nestjs/common';
 import { Response } from 'express';
 import { ClothesService } from './clothes.service';
@@ -35,7 +36,7 @@ export class ClothesController {
   }
 
   @Get(':id')
-  async getById(@Res() res: Response, @Param('id') id: number) {
+  async getById(@Res() res: Response, @Param('id', ParseIntPipe) id: number) {
     try {
       const serviceResponse = await this.clothesService.getClothe(id);
       if(Object.keys(serviceResponse).length && id > 0) {
@@ -62,7 +63,7 @@ export class ClothesController {
   @Delete(':id')
   async delete(
     @Res() res: Response,
-    @Param('id') id: number,
+    @Param('id', ParseIntPipe) id: number,
   ): Promise<Response<ClothesInterface>> {
     try {
       const serviceResponse = await this.clothesService.delete(id);
@@ -83,7 +84,7 @@ export class ClothesController {
   @Put(':id')
   async update(
     @Res() res: Response,
-    @Param('id') id: number,
+    @Param('id', ParseIntPipe) id: number,
     @Body() clothe: ClothesDTO,
   ) {
     try {
