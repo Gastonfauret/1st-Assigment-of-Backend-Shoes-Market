@@ -4,12 +4,19 @@ import ShoesCards from '../components/ShoesCards';
 
 function MapShoeCards() {
     const [shoes, setShoes] = useState([]);
-
+    const [reload, setReload] = useState(0);
+    const addReload = () => {
+      setReload(reload + 1);
+    }
+  
     useEffect(() => {
-        getShoes()
-            .then(res => res.json())
-            .then(data => setShoes(data))
-    }, [])
+      getShoes()
+        .then((res) => {
+          addReload();
+          return res.json()
+      })
+        .then((data) => setShoes(data));
+    }, [reload]);
     return (
         <div className="cards-container">
             {shoes.map(shoe => <ShoesCards shoe={shoe} key={shoe.id} />)}
