@@ -16,7 +16,7 @@ function MapUsersCards() {
         return res.json()
     })
       .then((data) => setUsers(data));
-  }, [reload]);
+  }, []);
   return (
     <div className="cards-container">
       {users.map((user) => (
