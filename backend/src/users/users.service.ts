@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { BASEURL } from 'src/shoes/shoes.service';
 import { UsersInterface } from './users.interface';
-import { UsersDTO } from './dto/users.dto';
+import { CreateUsersDTO, UpdateUsersDTO } from './dto/users.dto';
 
 @Injectable()
 export class UsersService {
@@ -30,7 +30,7 @@ export class UsersService {
     }
   
     //mostrar mensaje de respuesta.
-    async create(user: UsersDTO): Promise<UsersInterface> {
+    async create(user: CreateUsersDTO): Promise<UsersInterface> {
       const { name, lastname, age, image } = user;
       const newUser = {
         name: name,
@@ -63,7 +63,7 @@ export class UsersService {
       return deleted;
     }
   
-    async update(id: number, user: UsersDTO): Promise<UsersInterface> {
+    async update(id: number, user: CreateUsersDTO): Promise<UsersInterface> {
       const { name, lastname, age, image } = user;
       const updated = {
         name: name,
@@ -84,6 +84,35 @@ export class UsersService {
         }
       } catch (error) {
         throw new Error('Put request error' + error);
+      }
+    }
+
+    async partialUpdate(
+      id: number,
+      user: UpdateUsersDTO,
+    ): Promise<UpdateUsersDTO> {
+      const found = (await this.getUsers()).find(
+        (item) => item.id === Number(id),
+      );
+      const { name, lastname, age, image } = user;
+      const updated = {
+        name: name ? name : found.name,
+        lastname: lastname ? lastname : found.lastname,
+        age: age ? age : found.age,
+        id: id,
+        image: image ? image : found.image,
+      };
+      try {
+        if (found) {
+          await fetch(`${BASEURL}/users/${id}`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(updated),
+          });
+          return updated;
+        }
+      } catch (error) {
+        throw new Error('Patch request error' + error);
       }
     }
 }

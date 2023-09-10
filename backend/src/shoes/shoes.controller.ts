@@ -1,5 +1,3 @@
-import { ShoesService } from './shoes.service';
-import { ShoesDTO } from './dto/shoes.dto';
 import {
   Controller,
   Get,
@@ -13,8 +11,11 @@ import {
   HttpStatus,
   NotFoundException,
   BadRequestException,
-  ParseIntPipe
+  ParseIntPipe,
+  Patch
 } from '@nestjs/common';
+import { ShoesService } from './shoes.service';
+import { CreateShoesDTO, UpdateShoesDTO } from './dto/shoes.dto';
 import { Response } from 'express';
 import { ValidationPipe } from '@nestjs/common/pipes';
 import { ShoesInterface } from './shoes.interface';
@@ -51,7 +52,7 @@ export class ShoesController {
 
   @Post()
   @UsePipes(new ValidationPipe({ transform: true }))
-  async create(@Res() res: Response, @Body() shoe: ShoesDTO) {
+  async create(@Res() res: Response, @Body() shoe: CreateShoesDTO) {
     try {
       const serviceResponse = await this.shoesService.create(shoe);
       return res.status(HttpStatus.CREATED).json({message: 'Object has been created', data: serviceResponse});
@@ -85,17 +86,43 @@ export class ShoesController {
   async update(
     @Res() res: Response,
     @Param('id', ParseIntPipe) id: number,
-    @Body() shoe: ShoesDTO,
+    @Body() shoe: CreateShoesDTO,
   ) {
     try {
       const serviceResponse = await this.shoesService.update(id, shoe);
-      if(Object.keys(serviceResponse).length && id > 0) {
-        return res.status(HttpStatus.ACCEPTED).send({message: 'File has been updated', data: serviceResponse})
-      } else {
-        return res.status(HttpStatus.NOT_FOUND).send({ message: 'File not exist', errorCode: HttpStatus.NOT_FOUND })
+      if(Object.keys(serviceResponse).length) {
+        return res
+        .status(HttpStatus.ACCEPTED)
+        .send({ message: 'File has been updated', data: serviceResponse });
       }
     } catch (error) {
-      throw new BadRequestException('Data not found /' + error);
+      throw new BadRequestException({
+        message: 'Id non-existent',
+        errorCode: HttpStatus.BAD_REQUEST,
+      });
+    }
+  }
+
+  @Patch(':id')
+  @UsePipes(new ValidationPipe({ transform: true }))
+  async Partialupdate(
+    @Res() res: Response,
+    @Param('id', ParseIntPipe) id: number,
+    @Body() shoe: UpdateShoesDTO,
+  ) {
+    try {
+      const serviceResponse = await this.shoesService.partialUpdate(
+        id,
+        shoe,
+      );
+      return res
+        .status(HttpStatus.ACCEPTED)
+        .send({ message: 'File has been updated', data: serviceResponse });
+    } catch (error) {
+      throw new BadRequestException({
+        message: 'Id non-existent',
+        errorCode: HttpStatus.BAD_REQUEST,
+      });
     }
   }
 }

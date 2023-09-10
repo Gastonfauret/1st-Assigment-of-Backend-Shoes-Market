@@ -1,5 +1,7 @@
 export interface UsersInterface {
-  name: string
-  age: number
-  id: number
+  name: string;
+  lastname: string;
+  age: number;
+  id: number;
+  image: string;
 }

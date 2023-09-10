@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { BASEURL } from 'src/shoes/shoes.service';
 import { ClothesInterface } from './clothes.interface';
-import { ClothesDTO } from './dto/clothes.dto';
+import { CreateClothesDTO, UpdateClothesDTO } from './dto/clothes.dto';
 
 @Injectable()
 export class ClothesService {
@@ -30,7 +30,7 @@ export class ClothesService {
   }
 
   //mostrar mensaje de respuesta.
-  async create(clothe: ClothesDTO): Promise<ClothesInterface> {
+  async create(clothe: CreateClothesDTO): Promise<ClothesInterface> {
     const { marca, modelo, precio, talle, imagen } = clothe;
     const newClothe = {
       id: (await this.lastId()) + 1,
@@ -64,7 +64,10 @@ export class ClothesService {
     return deleted;
   }
 
-  async update(id: number, clothe: ClothesDTO): Promise<ClothesInterface> {
+  async update(
+    id: number,
+    clothe: CreateClothesDTO,
+  ): Promise<ClothesInterface> {
     const { marca, modelo, precio, talle, imagen } = clothe;
     const updated = {
       id: id,
@@ -75,8 +78,10 @@ export class ClothesService {
       imagen: imagen,
     };
     try {
-      const found = (await this.getClothes()).find((item) => item.id === Number(id));
-      if(found) {
+      const found = (await this.getClothes()).find(
+        (item) => item.id === Number(id),
+      );
+      if (found) {
         await fetch(`${BASEURL}/clothes/${id}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
@@ -86,6 +91,36 @@ export class ClothesService {
       }
     } catch (error) {
       throw new Error('Put request error' + error);
+    }
+  }
+
+  async partialUpdate(
+    id: number,
+    clothe: UpdateClothesDTO,
+  ): Promise<UpdateClothesDTO> {
+    const found = (await this.getClothes()).find(
+      (item) => item.id === Number(id),
+    );
+    const { marca, modelo, precio, talle, imagen } = clothe;
+    const updated = {
+      id: id,
+      marca: marca ? marca : found.marca,
+      modelo: modelo ? modelo : found.modelo,
+      precio: precio ? precio : found.precio,
+      talle: talle ? talle : found.talle,
+      imagen: imagen ? imagen : found.imagen,
+    };
+    try {
+      if (found) {
+        await fetch(`${BASEURL}/clothes/${id}`, {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(updated),
+        });
+        return updated;
+      }
+    } catch (error) {
+      throw new Error('Patch request error' + error);
     }
   }
 }

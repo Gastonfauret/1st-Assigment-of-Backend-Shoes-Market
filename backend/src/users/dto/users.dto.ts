@@ -1,24 +1,27 @@
-import { IsString, IsNotEmpty, IsInt } from 'class-validator';
+import { IsString, IsNotEmpty, IsInt, IsUrl } from 'class-validator';
+import { PartialType } from '@nestjs/mapped-types';
 import { Expose } from 'class-transformer';
 
-export class UsersDTO {
+export class CreateUsersDTO {
   @IsString()
   @IsNotEmpty()
   @Expose()
-  name: string;
+  readonly name: string;
 
   @IsString()
   @IsNotEmpty()
   @Expose()
-  lastname: string;
+  readonly lastname: string;
 
   @IsInt()
   @IsNotEmpty()
   @Expose()
-  age: number;
+  readonly age: number;
 
-  @IsString()
+  @IsUrl()
   @IsNotEmpty()
   @Expose()
-  image: string;
+  readonly image: string;
 }
+
+export class UpdateUsersDTO extends PartialType(CreateUsersDTO) {}

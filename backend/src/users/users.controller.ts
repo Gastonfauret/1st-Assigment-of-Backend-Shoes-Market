@@ -1,7 +1,6 @@
 import { UsersService } from './users.service';
 import { UsersInterface } from './users.interface';
-import { UsersDTO } from './dto/users.dto';
-import { ShoesInterface } from 'src/shoes/shoes.interface';
+import { CreateUsersDTO, UpdateUsersDTO } from './dto/users.dto';
 import {
   Controller,
   Get,
@@ -15,7 +14,8 @@ import {
   HttpStatus,
   NotFoundException,
   BadRequestException,
-  ParseIntPipe
+  ParseIntPipe,
+  Patch,
 } from '@nestjs/common';
 import { Response } from 'express';
 import { ValidationPipe } from '@nestjs/common/pipes';
@@ -25,9 +25,7 @@ export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
   @Get()
-  async get(
-    @Res() res: Response,
-  ): Promise<Response<UsersInterface[]>> {
+  async get(@Res() res: Response): Promise<Response<UsersInterface[]>> {
     try {
       const serviceResponse = await this.usersService.getUsers();
       return res.status(HttpStatus.OK).send(serviceResponse);
@@ -40,10 +38,17 @@ export class UsersController {
   async getById(@Res() res: Response, @Param('id', ParseIntPipe) id: number) {
     try {
       const serviceResponse = await this.usersService.getUser(id);
-      if(Object.keys(serviceResponse).length && id > 0) {
-        return res.status(HttpStatus.OK).send({message: `Request by id: ${id}`, data: serviceResponse});
+      if (Object.keys(serviceResponse).length && id > 0) {
+        return res
+          .status(HttpStatus.OK)
+          .send({ message: `Request by id: ${id}`, data: serviceResponse });
       } else {
-        return res.status(HttpStatus.NOT_FOUND).send({message: 'Non-existent or not allowed id', errorCode: HttpStatus.NOT_FOUND})
+        return res
+          .status(HttpStatus.NOT_FOUND)
+          .send({
+            message: 'Non-existent or not allowed id',
+            errorCode: HttpStatus.NOT_FOUND,
+          });
       }
     } catch (error) {
       throw new NotFoundException('Non-existent id');
@@ -52,10 +57,12 @@ export class UsersController {
 
   @Post()
   @UsePipes(new ValidationPipe({ transform: true }))
-  async create(@Res() res: Response, @Body() user: UsersDTO) {
+  async create(@Res() res: Response, @Body() user: CreateUsersDTO) {
     try {
       const serviceResponse = await this.usersService.create(user);
-      return res.status(HttpStatus.CREATED).json({message: 'Object has been created', data: serviceResponse});
+      return res
+        .status(HttpStatus.CREATED)
+        .json({ message: 'Object has been created', data: serviceResponse });
     } catch (error) {
       throw new BadRequestException('Data not allowed' + error);
     }
@@ -71,11 +78,17 @@ export class UsersController {
       if (Object.keys(serviceResponse).length) {
         return res
           .status(HttpStatus.OK)
-          .send({ message: `File has been deleted: Id ${id}`, code: HttpStatus.OK });
+          .send({
+            message: `File has been deleted: Id ${id}`,
+            code: HttpStatus.OK,
+          });
       } else {
         return res
           .status(HttpStatus.NOT_FOUND)
-          .send({ message: 'Non-existent id', errorCode: HttpStatus.NOT_FOUND });
+          .send({
+            message: 'Non-existent id',
+            errorCode: HttpStatus.NOT_FOUND,
+          });
       }
     } catch (error) {
       throw new NotFoundException('Data not found' + error);
@@ -86,17 +99,44 @@ export class UsersController {
   async update(
     @Res() res: Response,
     @Param('id', ParseIntPipe) id: number,
-    @Body() user: UsersDTO,
+    @Body() user: CreateUsersDTO,
   ) {
     try {
       const serviceResponse = await this.usersService.update(id, user);
-      if(Object.keys(serviceResponse).length && id > 0) {
-        return res.status(HttpStatus.ACCEPTED).send({message: 'File has been updated', data: serviceResponse})
-      } else {
-        return res.status(HttpStatus.NOT_FOUND).send({ message: 'File not exist', errorCode: HttpStatus.NOT_FOUND })
+      if(Object.keys(serviceResponse).length) {
+        console.log("Hola")
+        return res
+        .status(HttpStatus.ACCEPTED)
+        .send({ message: 'File has been updated', data: serviceResponse });
       }
     } catch (error) {
-      throw new BadRequestException('Data not found /' + error);
+      throw new BadRequestException({
+        message: 'Id non-existent',
+        errorCode: HttpStatus.BAD_REQUEST,
+      });
+    }
+  }
+
+  @Patch(':id')
+  @UsePipes(new ValidationPipe({ transform: true }))
+  async Partialupdate(
+    @Res() res: Response,
+    @Param('id', ParseIntPipe) id: number,
+    @Body() user: UpdateUsersDTO,
+  ) {
+    try {
+      const serviceResponse = await this.usersService.partialUpdate(
+        id,
+        user,
+      );
+      return res
+        .status(HttpStatus.ACCEPTED)
+        .send({ message: 'File has been updated', data: serviceResponse });
+    } catch (error) {
+      throw new BadRequestException({
+        message: 'Id non-existent',
+        errorCode: HttpStatus.BAD_REQUEST,
+      });
     }
   }
 }

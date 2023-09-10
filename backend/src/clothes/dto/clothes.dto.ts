@@ -1,29 +1,32 @@
-import { IsString, IsNotEmpty } from 'class-validator';
+import { IsString, IsNotEmpty, IsUrl } from 'class-validator';
 import { Expose } from 'class-transformer';
+import { PartialType } from '@nestjs/mapped-types';
 
-export class ClothesDTO {
-    @IsString()
-    @IsNotEmpty()
-    @Expose()
-    marca: string;
+export class CreateClothesDTO {
+  @IsString()
+  @IsNotEmpty()
+  @Expose()
+  readonly marca: string;
 
-    @IsString()
-    @IsNotEmpty()
-    @Expose()
-    modelo: string;
+  @IsString()
+  @IsNotEmpty()
+  @Expose()
+  readonly modelo: string;
 
-    @IsString()
-    @IsNotEmpty()
-    @Expose()
-    precio: string;
+  @IsString()
+  @IsNotEmpty()
+  @Expose()
+  readonly precio: string;
 
-    @IsString()
-    @IsNotEmpty()
-    @Expose()
-    talle: string;
+  @IsString()
+  @IsNotEmpty()
+  @Expose()
+  readonly talle: string;
 
-    @IsString()
-    @IsNotEmpty()
-    @Expose()
-    imagen: string;
+  @IsUrl()
+  @IsNotEmpty()
+  @Expose()
+  readonly imagen: string;
 }
+
+export class UpdateClothesDTO extends PartialType(CreateClothesDTO) {}
