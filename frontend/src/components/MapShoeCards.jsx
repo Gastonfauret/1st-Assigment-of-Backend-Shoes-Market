@@ -16,7 +16,7 @@ function MapShoeCards() {
           return res.json()
       })
         .then((data) => setShoes(data));
-    }, []);
+    }, [reload]);
     return (
         <div className="cards-container">
             {shoes.map(shoe => <ShoesCards shoe={shoe} key={shoe.id} />)}
