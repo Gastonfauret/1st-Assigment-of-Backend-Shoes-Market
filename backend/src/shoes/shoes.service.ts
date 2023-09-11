@@ -109,7 +109,7 @@ export class ShoesService {
     };
     try {
       if (found) {
-        await fetch(`${BASEURL}/clothes/${id}`, {
+        await fetch(`${BASEURL}/shoes/${id}`, {
           method: 'PATCH',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(updated),
