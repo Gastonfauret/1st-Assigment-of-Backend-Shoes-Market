@@ -12,6 +12,7 @@ import BannerHome from './components/BannerHome';
 
 
 import './styles/App.css'
+import MyForm from './components/AddNew';
 
 function App() {
 
@@ -26,7 +27,9 @@ function App() {
         <Route exact path='/shoes' element={<MapShoeCards />} />
         <Route exact path='/clothes' element={<MapClothesCards />} />
         <Route exact path='/users' element={<MapUsersCards />} />
-      </Routes>     
+      </Routes>
+
+      <MyForm/>     
 
       <Footer />
 
