@@ -10,16 +10,17 @@
         display: flex;
         gap: 3rem;
         font-family: 'Roboto', sans-serif;
+        font-weight: 600;
         
 
         & a {
             text-decoration: none;
-            color: black;
+            color: #D0D3D4;
         }
 
         & a:hover {
-            color: rgba(0, 128, 0, 0.289);
-        }
+            color: black;
+        }        
 
     }
 }

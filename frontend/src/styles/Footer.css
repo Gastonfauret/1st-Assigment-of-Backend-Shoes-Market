@@ -21,7 +21,7 @@
     }
 
     & h3 {
-        color: white;
+        color: white;        
         font-size: small;
         font-family: 'Roboto', sans-serif;
         margin-top: 2rem;
@@ -36,6 +36,7 @@
         margin-top: 0px;
         margin-left: 2rem;
         margin-bottom: 0.5rem;
+        font-weight: 600;
     }
 
     & .copy-design-container {

@@ -16,15 +16,13 @@
 
     & .text-container {
         & p {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Roboto', sans-serif;            
             font-size: 40PX;
             color: #2E86C1;
             text-align: center;            
             align-items: center;  
             margin-left: 6rem; 
             width: 30rem;  
-                   
-
         }
     }
 
