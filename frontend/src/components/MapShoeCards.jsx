@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getShoes } from '../api/getShoes';
 import ShoesCards from '../components/ShoesCards';
+import Modal from './Modal';
 
 function MapShoeCards() {
     const [shoes, setShoes] = useState([]);
@@ -13,9 +14,12 @@ function MapShoeCards() {
         .then((data) => setShoes(data));
     }, []);
     return (
+      <>
+      <Modal />
         <div className="cards-container">
             {shoes.map(shoe => <ShoesCards shoe={shoe} key={shoe.id} />)}
         </div>
+      </>
     )
 }
 

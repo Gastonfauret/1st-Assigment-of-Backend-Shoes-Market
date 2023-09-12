@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { getUsers } from "../api/getUsers";
 import UsersCards from "../components/UsersCards";
 import Modal from "./Modal";
-const baseURL = 'http://localhost:3080/users'
 
 function MapUsersCards() {
   const [users, setUsers] = useState([]);
