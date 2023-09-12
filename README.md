@@ -10,3 +10,22 @@ Package Installation:
 Start App:
 
 - nest start --watch
+
+To run project: 
+
+-git clone https://github.com/Gastonfauret/1st-Assigment-of-Backend-Shoes-Market.git in a empty local folder.
+
+-cd 1st-Assigment-of-Backend-Shoes-Market (Enter in the project folder)
+
+-npm install
+
+
+
+To rise the servers:
+
+In "Backend" folder: npm run start:dev
+
+in "test-server" folder: npm run db
+
+In "Frontend" folder: npm run dev
+

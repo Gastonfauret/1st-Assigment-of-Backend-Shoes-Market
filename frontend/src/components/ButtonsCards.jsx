@@ -1,18 +1,65 @@
-import { Link } from "react-router-dom";
-import '../styles/ButtonsCards.css';
+import { Link, NavLink } from "react-router-dom";
+import "../styles/ButtonsCards.css";
+import {
+  useSwitchToUsers,
+  useSwitchToClothes,
+  useSwitchToShoes,
+} from "./ProviderContext";
 
 function ButtonsCards() {
-    return (
-        <div className="buttons-container">
-            <ul>
-                <li><Link to='/home'>Home</Link></li>
-                <li><Link to='/shoes'>Shoes</Link></li>
-                <li><Link to='/clothes'>Clothes</Link></li>
-                <li><Link to='/users'>Users</Link></li>
-            </ul>
-        </div>
+  const switchToUsers = useSwitchToUsers();
+  const switchToClothes = useSwitchToClothes();
+  const switchToShoes = useSwitchToShoes();
 
-    )
+  return (
+    <div className="buttons-container">
+      <ul>
+        <li>
+          <NavLink
+            to={"/home"}
+            style={({ isActive }) => {
+              return { color: isActive ? "green" : null };
+            }}
+          >
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to={"/shoes"}
+            onClick={switchToShoes}
+            style={({ isActive }) => {
+              return { color: isActive ? "green" : null };
+            }}
+          >
+            Shoes
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to={"/clothes"}
+            onClick={switchToClothes}
+            style={({ isActive }) => {
+              return { color: isActive ? "green" : null };
+            }}
+          >
+            Clothes
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to={"/users"}
+            onClick={switchToUsers}
+            style={({ isActive }) => {
+              return { color: isActive ? "green" : null };
+            }}
+          >
+            Users
+          </NavLink>
+        </li>
+      </ul>
+    </div>
+  );
 }
 
 export default ButtonsCards;
