@@ -20,6 +20,10 @@
     background-color: rgba(255, 255, 255, 0.784);
 }
 
+.new-modal-container input {
+  padding-left: 8px;
+}
+
 .new-modal-container input,
 .new-modal-container button {
   height: 50px;
