@@ -18,7 +18,7 @@ function ButtonsCards() {
           <NavLink
             to={"/home"}
             style={({ isActive }) => {
-              return { color: isActive ? "black" : null };
+              return { color: isActive ? "green" : null };
             }}
           >
             Home
@@ -29,7 +29,7 @@ function ButtonsCards() {
             to={"/shoes"}
             onClick={switchToShoes}
             style={({ isActive }) => {
-              return { color: isActive ? "black" : null };
+              return { color: isActive ? "green" : null };
             }}
           >
             Shoes
@@ -40,7 +40,7 @@ function ButtonsCards() {
             to={"/clothes"}
             onClick={switchToClothes}
             style={({ isActive }) => {
-              return { color: isActive ? "black" : null };
+              return { color: isActive ? "green" : null };
             }}
           >
             Clothes
@@ -51,7 +51,7 @@ function ButtonsCards() {
             to={"/users"}
             onClick={switchToUsers}
             style={({ isActive }) => {
-              return { color: isActive ? "black" : null };
+              return { color: isActive ? "green" : null };
             }}
           >
             Users
