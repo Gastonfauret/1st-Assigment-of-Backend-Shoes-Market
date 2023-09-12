@@ -1,0 +1,43 @@
+.modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.457);
+}
+
+.new-modal-container {
+    width: 35vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.784);
+}
+
+.new-modal-container input,
+.new-modal-container button {
+  height: 50px;
+}
+
+.modal-buttons__container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.modal-buttons__container button {
+  border: 1px solid rgba(0, 0, 0, 0.542);
+  font-size: 1.2rem;
+
+}
+
+.modal-buttons__container :first-child {
+  background-color: rgba(0, 0, 0, 0.542);
+  color: white;
+}
