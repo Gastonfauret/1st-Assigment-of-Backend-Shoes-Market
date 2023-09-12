@@ -9,6 +9,7 @@ import MapClothesCards from './components/MapClothesCards';
 import MapUsersCards from './components/MapUsersCards';
 import ButtonsCards from './components/ButtonsCards';
 import BannerHome from './components/BannerHome';
+import Logo from './components/Logo'
 
 
 import './styles/App.css'
@@ -17,6 +18,7 @@ function App() {
 
   return (
     <>
+      <Logo/>
       <Carousel />
       <Branches />
       <ButtonsCards />
