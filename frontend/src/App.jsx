@@ -18,7 +18,7 @@ function App() {
   return (
     <>
       <ProviderContext>
-           <Logo/>
+        <Logo/>
         <Carousel />
         <Branches />
         <ButtonsCards />
@@ -29,7 +29,6 @@ function App() {
           <Route exact path="/clothes" element={<MapClothesCards />} />
           <Route exact path="/users" element={<MapUsersCards />} />
         </Routes>
-
         <Footer />
       </ProviderContext>
     </>
