@@ -15,11 +15,11 @@ Start App:
 
 # To run project: 
 
--git clone https://github.com/Gastonfauret/1st-Assigment-of-Backend-Shoes-Market.git inside an empty local folder.
+- git clone https://github.com/Gastonfauret/1st-Assigment-of-Backend-Shoes-Market.git inside an empty local folder.
 
--cd 1st-Assigment-of-Backend-Shoes-Market (Enter in the project folder)
+- cd 1st-Assigment-of-Backend-Shoes-Market (Enter in the project folder)
 
--npm install
+- npm install
 
 
 
