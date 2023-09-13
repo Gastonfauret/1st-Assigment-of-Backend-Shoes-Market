@@ -31,13 +31,13 @@ npm install
 
 npm run start:dev
 
--in "test-server" folder:
+- in "test-server" folder:
 
 npm install
 
 npm run db
 
--In "Frontend" folder:
+- In "Frontend" folder:
 
 npm install
 
