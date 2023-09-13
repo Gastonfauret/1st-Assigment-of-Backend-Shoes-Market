@@ -24,14 +24,20 @@ To run project:
 To rise the servers:
 
 In "Backend" folder: 
+
 npm install
+
 npm run start:dev
 
 in "test-server" folder:
+
 npm install
+
 npm run db
 
 In "Frontend" folder:
+
 npm install
+
 npm run dev
 
