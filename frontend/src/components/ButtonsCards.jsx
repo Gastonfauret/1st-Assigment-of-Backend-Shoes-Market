@@ -16,7 +16,7 @@ function ButtonsCards() {
       <ul>
         <li>
           <NavLink
-            to={"/home"}
+            to={"/"}
             style={({ isActive }) => {
               return { color: isActive ? "black" : null };
             }}

@@ -24,7 +24,7 @@ function App() {
         <ButtonsCards />
 
         <Routes>
-          <Route exact path="/home" element={<BannerHome />} />
+          <Route exact path="/" element={<BannerHome />} />
           <Route exact path="/shoes" element={<MapShoeCards />} />
           <Route exact path="/clothes" element={<MapClothesCards />} />
           <Route exact path="/users" element={<MapUsersCards />} />
