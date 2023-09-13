@@ -13,14 +13,9 @@ Start App:
 
 ---------------------------------------------------------------------------------------------------------------------
 
-# To run project: 
+# To clone project: 
 
 - git clone https://github.com/Gastonfauret/1st-Assigment-of-Backend-Shoes-Market.git inside an empty local folder.
-
-- cd 1st-Assigment-of-Backend-Shoes-Market (Enter in the project folder)
-
-- npm install
-
 
 
 # To rise the servers:
