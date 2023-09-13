@@ -11,7 +11,7 @@ Start App:
 
 - nest start --watch
 
-+ To run project: 
+# To run project: 
 
 -git clone https://github.com/Gastonfauret/1st-Assigment-of-Backend-Shoes-Market.git in a empty local folder.
 
@@ -21,7 +21,7 @@ Start App:
 
 ------------------------------------------------------------------------------------------------------------------------
 
-+ To rise the servers:
+# To rise the servers:
 
 -- In "Backend" folder: 
 
