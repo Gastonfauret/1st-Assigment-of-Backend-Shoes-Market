@@ -1,0 +1,282 @@
+{
+  "clothes": [
+    {
+      "id": 1,
+      "marca": "Blackhair",
+      "modelo": "jacket",
+      "precio": "$ 35.00",
+      "talle": "M",
+      "imagen": "https://i.postimg.cc/MKM50MSk/Clothes-1.png"
+    },
+    {
+      "id": 2,
+      "marca": "Fearless",
+      "modelo": "Remera oversize",
+      "precio": "$ 80.00",
+      "talle": "L",
+      "imagen": "https://i.postimg.cc/HWP370F4/Clothes-2.png"
+    },
+    {
+      "id": 3,
+      "marca": "Dennis Rodman",
+      "modelo": "Remera oversize",
+      "precio": "$ 45.00",
+      "talle": "S",
+      "imagen": "https://i.postimg.cc/4yn5SnH9/Clothes-3.png"
+    },
+    {
+      "id": 4,
+      "marca": "Shein",
+      "modelo": "Buzo",
+      "precio": "$ 50.00",
+      "talle": "M",
+      "imagen": "https://i.postimg.cc/7LMmCFyf/Clothes-4.png"
+    },
+    {
+      "id": 5,
+      "marca": "Scarface",
+      "modelo": "Remera",
+      "precio": "$ 25.00",
+      "talle": "L",
+      "imagen": "https://i.postimg.cc/d1566G3F/Clothes-5.png"
+    },
+    {
+      "id": 6,
+      "marca": "Carhart",
+      "modelo": "Jean ",
+      "precio": "$ 60.00",
+      "talle": "S",
+      "imagen": "https://i.postimg.cc/G2Lty0jY/6.png"
+    },
+    {
+      "id": 7,
+      "marca": "Supreme",
+      "modelo": "Rompeviento",
+      "precio": "$ 40.00",
+      "talle": "M",
+      "imagen": "https://i.postimg.cc/VvTRQ1XH/Clothes-7.png"
+    },
+    {
+      "id": 8,
+      "marca": "Levi's",
+      "modelo": "Jean Clásico",
+      "precio": "$ 70.00",
+      "talle": "L",
+      "imagen": "https://i.postimg.cc/SK7jRQck/8.png"
+    },
+    {
+      "id": 9,
+      "marca": "Stussy",
+      "modelo": "Remera oversize",
+      "precio": "$ 55.00",
+      "talle": "S",
+      "imagen": "https://i.postimg.cc/ZK2fXPcK/Clothes-9.png"
+    },
+    {
+      "id": 10,
+      "marca": "Northface",
+      "modelo": "Campera puffer",
+      "precio": "$ 30.00",
+      "talle": "M",
+      "imagen": "https://i.postimg.cc/85pwLZ1w/Clothes-10.png"
+    },
+    {
+      "id": 11,
+      "marca": "marca",
+      "modelo": "qef",
+      "precio": "$ 35.00",
+      "talle": "M",
+      "imagen": "rgvergbvef.com"
+    }
+  ],
+  "shoes": [
+    {
+      "id": 1,
+      "marca": "Nike",
+      "modelo": "Air Max 90",
+      "precio": "$USD 150",
+      "talle": "US 10",
+      "imagen": "https://i.postimg.cc/xCcNC6cB/1.png"
+    },
+    {
+      "id": 2,
+      "marca": "Adidas",
+      "modelo": "Superstar",
+      "precio": "$USD 100",
+      "talle": "US 9",
+      "imagen": "https://i.postimg.cc/k4z6tWSG/2.png"
+    },
+    {
+      "id": 3,
+      "marca": "Vans",
+      "modelo": "Old Skool",
+      "precio": "$USD 75",
+      "talle": "US 7",
+      "imagen": "https://i.postimg.cc/0ysSfGBJ/3.png"
+    },
+    {
+      "id": 4,
+      "marca": "New Balance",
+      "modelo": "550",
+      "precio": "$USD 180",
+      "talle": "US 10.5",
+      "imagen": "https://i.postimg.cc/Gp3y0LrL/4.png"
+    },
+    {
+      "id": 5,
+      "marca": "Converse",
+      "modelo": "Chuck Taylor All Star",
+      "precio": "$USD 65",
+      "talle": "US 9.5",
+      "imagen": "https://i.postimg.cc/8CyrN2Ph/5.png"
+    },
+    {
+      "id": 6,
+      "marca": "DC Shoes",
+      "modelo": "Pure",
+      "precio": "$USD 70",
+      "talle": "US 8",
+      "imagen": "https://i.postimg.cc/rFS0K0wy/6.png"
+    },
+    {
+      "id": 7,
+      "marca": "Jordan",
+      "modelo": "Air Jordan 1",
+      "precio": "$USD 170",
+      "talle": "US 11",
+      "imagen": "https://i.postimg.cc/vZtVS1J2/7.png"
+    },
+    {
+      "id": 8,
+      "marca": "Nike",
+      "modelo": "React Element 55",
+      "precio": "$USD 130",
+      "talle": "US 10.5",
+      "imagen": "https://i.postimg.cc/qqKtcgcL/8.png"
+    },
+    {
+      "id": 9,
+      "marca": "Vans",
+      "modelo": "Sk8-Hi",
+      "precio": "$USD 85",
+      "talle": "US 9",
+      "imagen": "https://i.postimg.cc/CMnfp6yq/9.png"
+    },
+    {
+      "id": 10,
+      "marca": "Nike",
+      "modelo": "Dunk",
+      "precio": "$USD 90",
+      "talle": "US 8.5",
+      "imagen": "https://i.postimg.cc/bNXSyH8F/10.png"
+    },
+    {
+      "id": 11,
+      "marca": "rrrr",
+      "modelo": "rrrrr",
+      "precio": "rrrrr",
+      "talle": "xxl",
+      "imagen": "www.rrr.com"
+    }
+  ],
+  "users": [
+    {
+      "name": "Alice",
+      "lastname": "Johnson",
+      "age": 25,
+      "id": 1,
+      "image": "https://i.postimg.cc/wT5S6Ddb/1.jpg"
+    },
+    {
+      "name": "Bob",
+      "lastname": "Williams",
+      "age": 30,
+      "id": 2,
+      "image": "https://i.postimg.cc/K8JwTFjP/2.jpg"
+    },
+    {
+      "name": "Charlie",
+      "lastname": "Smith",
+      "age": 28,
+      "id": 3,
+      "image": "https://i.postimg.cc/Z5TX00bY/3.jpg"
+    },
+    {
+      "name": "David",
+      "lastname": "Brown",
+      "age": 22,
+      "id": 4,
+      "image": "https://i.postimg.cc/jdYp0ZB7/4.jpg"
+    },
+    {
+      "name": "Eva",
+      "lastname": "Jones",
+      "age": 29,
+      "id": 5,
+      "image": "https://i.postimg.cc/TPssk9rh/5.jpg"
+    },
+    {
+      "name": "Frank",
+      "lastname": "Garcia",
+      "age": 35,
+      "id": 6,
+      "image": "https://i.postimg.cc/nrBN9D9r/6.jpg"
+    },
+    {
+      "name": "Grace",
+      "lastname": "Miller",
+      "age": 27,
+      "id": 7,
+      "image": "https://i.postimg.cc/c1npbVkW/7.jpg"
+    },
+    {
+      "name": "Helen",
+      "lastname": "Davis",
+      "age": 31,
+      "id": 8,
+      "image": "https://i.postimg.cc/DZbMRXg6/8.jpg"
+    },
+    {
+      "name": "Ian",
+      "lastname": "Anderson",
+      "age": 26,
+      "id": 9,
+      "image": "https://i.postimg.cc/PJsRH5Vj/9.jpg"
+    },
+    {
+      "name": "Jasmine",
+      "lastname": "Taylor",
+      "age": 24,
+      "id": 10,
+      "image": "https://i.postimg.cc/hGvwbwQH/10.jpg"
+    },
+    {
+      "name": "Ian",
+      "lastname": "Anderson",
+      "age": 26,
+      "id": 11,
+      "image": "https://i.postimg.cc/PJsRH5Vj/9.jpg"
+    },
+    {
+      "name": "Ian",
+      "lastname": "Anderson",
+      "age": 26,
+      "id": 12,
+      "image": "https://i.postimg.cc/PJsRH5Vj/9.jpg"
+    },
+    {
+      "name": "Tomas",
+      "lastname": "Cardenas",
+      "age": 27,
+      "id": 13,
+      "image": "https://i.postimg.cc/wT5S6Ddb/1.jpg"
+    },
+    {
+      "name": "Adrian",
+      "lastname": "Calo",
+      "age": 27,
+      "id": 14,
+      "image": "https://media.licdn.com/dms/image/D4D03AQEDeM7C22e9lw/profile-displayphoto-shrink_800_800/0/1681085227500?e=2147483647&v=beta&t=9PKSi8gZD6UdmZi3ZhKj75wH1IruK_MEifpjrNdqrOk"
+    }
+  ]
+}

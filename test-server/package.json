@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "db": "json-server --watch ./data/index.js --port 3150"
+    "db": "json-server --watch ./data/resources.json --port 3150"
   },
   "repository": {
     "type": "git",

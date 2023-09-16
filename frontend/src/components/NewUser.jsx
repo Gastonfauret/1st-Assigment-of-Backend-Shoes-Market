@@ -5,7 +5,7 @@ function NewUser({ closeModal }) {
   const [formData, setFormData] = useState({
     name: "",
     lastname: "",
-    age: undefined,
+    age: "",
     image: "",
   });
   const [error, setError] = useState(false);
